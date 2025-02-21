@@ -1,6 +1,7 @@
 import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:big_cart/features/home/ui/pages/second_page.dart';
+import 'package:big_cart/features/onboarding/ui/pages/onboarding_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class AppRouter {
 
     switch (settings.name) {
       case Routes.onBoardingPage:
-        return MaterialPageRoute(builder: (_) => const HomePage());
+        return MaterialPageRoute(builder: (_) => const OnboardingPage());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
       case Routes.secondHome:

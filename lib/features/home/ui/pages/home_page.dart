@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           children: [
             Text('Home Page'),
             MaterialButton(onPressed: (){
-              context.pushNamed(Routes.secondHome);
+              context.pushNamed(Routes.onBoardingPage);
             }, child: Text('Go to Second Page'))
           ],
         ),
