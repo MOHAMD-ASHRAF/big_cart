@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../theming/colors.dart';
-import '../theming/style.dart';
+import '../theming/app_colors.dart';
+import '../theming/app_text_styles.dart';
 
 class AppTextFormFeild extends StatelessWidget {
   const AppTextFormFeild(
@@ -42,14 +42,14 @@ class AppTextFormFeild extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
                 borderSide: const BorderSide(
-                  color: ColorsManager.mainBlue,
+                  color: AppColors.primary,
                   width: 1.3,
                 ),
                 borderRadius: BorderRadius.circular(16)),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
                 borderSide: const BorderSide(
-                  color: ColorsManager.lighterGray,
+                  color: AppColors.primaryLight,
                   width: 1.3,
                 ),
                 borderRadius: BorderRadius.circular(16)),
@@ -61,18 +61,18 @@ class AppTextFormFeild extends StatelessWidget {
             borderRadius: BorderRadius.circular(16)),
           focusedErrorBorder:  OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
+                color: AppColors.primaryLight,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16)),
-        hintStyle: hintStyle ?? TextStyles.font14LightGreyRegular,
+        hintStyle: hintStyle ?? AppTextStyles.font10BlackCairoMedium,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: backGroundColor ?? ColorsManager.moreLightGray,
+        fillColor: backGroundColor ?? AppColors.primaryLight,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font16DarkBlueBoldMedium,
+      style: AppTextStyles.font10BlackCairoMedium,
       validator: (value){
         return validator(value);
       }

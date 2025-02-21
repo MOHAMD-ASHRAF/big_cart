@@ -1,4 +1,4 @@
-import 'package:big_cart/core/theming/colors.dart';
+import 'package:big_cart/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,11 +20,11 @@ class BigCartApp extends StatelessWidget {
         onGenerateRoute: appRouter.generateRoute,
         title: 'Doc App',
         theme: ThemeData(
-          primaryColor: ColorsManager.mainBlue,
+          primaryColor: AppColors.primary,
           scaffoldBackgroundColor: Colors.white
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homePage,
+        initialRoute: Routes.onBoardingPage,
       ),
     );
   }
