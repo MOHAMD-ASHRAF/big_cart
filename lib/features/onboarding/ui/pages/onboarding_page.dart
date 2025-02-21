@@ -1,8 +1,12 @@
+import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
+import 'package:big_cart/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/constants/app_assets.dart';
-import '../../../../core/theming/app_colors.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
+import '../widgets/custom_indicator.dart';
 import '../widgets/custom_onBoarding_widget.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -19,7 +23,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.bottomCenter,
       children: [
         Expanded(
           child: PageView(
@@ -33,7 +36,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               CustomOnBoardingWidget(
                 heading1: 'Welcome to',
                 showLogo: true,
-                description: 'Lorem ipsum dolor sit amet, consetetur',
+                description: 'Lorem ipsum dolor sit amet,  rem ipsum dolor sit amet, conset rem ipsum dolor sit amet, conset',
                 backGroundImage: AppAssets.firstImage,
               ),
               CustomOnBoardingWidget(
@@ -51,52 +54,38 @@ class _OnboardingPageState extends State<OnboardingPage> {
             ],
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomIndicator(active: index == 0),
-            horizontalSpace(5),
-            CustomIndicator(active: index == 1),
-            horizontalSpace(5),
-            CustomIndicator(active: index == 2),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomIndicator(active: index == 0),
+                  horizontalSpace(6),
+                  CustomIndicator(active: index == 1),
+                  horizontalSpace(6),
+                  CustomIndicator(active: index == 2),
+                ],
+              ),
+              verticalSpace(10),
+              AppTextButton(
+                buttonText: "Get Started",
+                textStyle: AppTextStyles.font14WhiteCairoMedium,
+                gradient: const LinearGradient(
+                  colors: [AppColors.primary, AppColors.primaryDark],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                onPressed: () {
+                  context.pushReplacementNamed(Routes.homePage);
+                },
+              ),
+            ],
+          ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-                onPressed: () {
-                  _controller.jumpToPage(2);
-                },
-                child: Text('Skip')),
-            TextButton(
-                onPressed: () {
-                  _controller.animateToPage(index + 1,
-                      duration: Duration(milliseconds: 250),
-                      curve: Curves.linear);
-                },
-                child: Text('Next')),
-          ],
-        )
       ],
-    );
-  }
-}
-
-class CustomIndicator extends StatelessWidget {
-  final bool active;
-
-  const CustomIndicator({super.key, required this.active});
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 250),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          color: active ? AppColors.primary : AppColors.primaryLight),
-      width: active ? 15 : 10,
-      height: 10,
     );
   }
 }

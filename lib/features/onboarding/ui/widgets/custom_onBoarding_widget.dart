@@ -1,3 +1,4 @@
+import 'package:big_cart/core/constants/app_assets.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +41,7 @@ class CustomOnBoardingWidget extends StatelessWidget {
               ),
               showLogo
                   ? Image.asset(
-                      'assets/image/logo.png',
+                      AppAssets.logo,
                       width: 100.w,
                     )
                   : Text(

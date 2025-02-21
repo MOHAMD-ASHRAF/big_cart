@@ -151,6 +151,12 @@ abstract class AppTextStyles {
     fontWeight: AppFontWeights.medium,
   );
 
+  static TextStyle get font14WhiteCairoMedium => GoogleFonts.cairo(
+    fontSize: 14.sp,
+    color: Colors.white,
+    fontWeight: AppFontWeights.medium,
+  );
+
   static TextStyle get font16MediumMonserrat => GoogleFonts.montserrat(
     fontSize: 16.sp,
     fontWeight: AppFontWeights.medium,
