@@ -24,35 +24,33 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Expanded(
-          child: PageView(
-            controller: _controller,
-            onPageChanged: (value) {
-              setState(() {
-                index = value;
-              });
-            },
-            children: [
-              CustomOnBoardingWidget(
-                heading1: 'Welcome to',
-                showLogo: true,
-                description: 'Lorem ipsum dolor sit amet,  rem ipsum dolor sit amet, conset rem ipsum dolor sit amet, conset',
-                backGroundImage: AppAssets.firstImage,
-              ),
-              CustomOnBoardingWidget(
-                heading1: 'Buy Quality',
-                heading2: 'Dairy Products',
-                description: 'Lorem ipsum dolor sit amet, consetetur',
-                backGroundImage: AppAssets.secondImage,
-              ),
-              CustomOnBoardingWidget(
-                heading1: 'Buy Premium',
-                heading2: 'Quality Fruits',
-                description: 'Lorem ipsum dolor sit amet, consetetur',
-                backGroundImage: AppAssets.thirdImage,
-              ),
-            ],
-          ),
+        PageView(
+          controller: _controller,
+          onPageChanged: (value) {
+            setState(() {
+              index = value;
+            });
+          },
+          children: [
+            CustomOnBoardingWidget(
+              heading1: 'Welcome to',
+              showLogo: true,
+              description: 'Lorem ipsum dolor sit amet,  rem ipsum dolor sit amet, conset rem ipsum dolor sit amet, conset',
+              backGroundImage: AppAssets.firstImage,
+            ),
+            CustomOnBoardingWidget(
+              heading1: 'Buy Quality',
+              heading2: 'Dairy Products',
+              description: 'Lorem ipsum dolor sit amet, consetetur',
+              backGroundImage: AppAssets.secondImage,
+            ),
+            CustomOnBoardingWidget(
+              heading1: 'Buy Premium',
+              heading2: 'Quality Fruits',
+              description: 'Lorem ipsum dolor sit amet, consetetur',
+              backGroundImage: AppAssets.thirdImage,
+            ),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20),
