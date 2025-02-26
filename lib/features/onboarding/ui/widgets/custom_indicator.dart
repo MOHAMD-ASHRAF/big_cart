@@ -17,8 +17,8 @@ class CustomIndicator extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
           color: active ? AppColors.primary : AppColors.lightGray),
-      width: active ? 16.h : 12.h,
-      height: 12.h,
+      width: active ? 12.h : 10.h,
+      height: 10.h,
     );
   }
 }
