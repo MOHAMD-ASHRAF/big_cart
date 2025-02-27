@@ -15,6 +15,7 @@ abstract class AppAssets {
 
 //******************************* VECTORS ************************************
   static const String google = 'assets/vectors/google.svg';
+  static const String person = 'assets/vectors/person.svg';
 
 
   //***************************** LOTTIE FILES *********************************
