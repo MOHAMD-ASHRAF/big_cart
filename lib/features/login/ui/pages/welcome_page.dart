@@ -73,6 +73,7 @@ class WelcomePage extends StatelessWidget {
                               style: AppTextStyles.font16BlackCairoMedium
                                   .copyWith(fontWeight: FontWeight.bold),
                               recognizer: TapGestureRecognizer()
+
                                 ..onTap = () {
                                   context.pushNamed(Routes.homePage);
                                 },
