@@ -77,7 +77,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   end: Alignment.bottomRight,
                 ),
                 onPressed: () {
-                  context.pushReplacementNamed(Routes.homePage);
+                  context.pushReplacementNamed(Routes.welcomePage);
                 },
               ),
             ],

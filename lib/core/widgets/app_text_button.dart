@@ -1,6 +1,10 @@
+import 'package:big_cart/core/constants/app_assets.dart';
+import 'package:big_cart/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
+import '../helpers/spacing.dart';
 import '../theming/app_colors.dart';
 
 class AppTextButton extends StatelessWidget {
@@ -14,7 +18,8 @@ class AppTextButton extends StatelessWidget {
     this.buttonWidth,
     this.buttonHeight,
     required this.buttonText,
-    required this.textStyle,
+    this.textStyle,
+    this.image,
     required this.onPressed,
   });
 
@@ -26,20 +31,28 @@ class AppTextButton extends StatelessWidget {
   final double? buttonWidth;
   final double? buttonHeight;
   final String buttonText;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
   final VoidCallback onPressed;
+  final String? image;
+
+  /// Default gradient
+  Gradient get _defaultGradient => LinearGradient(
+    colors: [AppColors.primary, AppColors.primaryDark], // Example gradient
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: gradient, // Use gradient if provided
-        color: gradient == null ? backGroundColor ?? AppColors.primary : null, // Fallback to solid color
+        gradient: backGroundColor == null ? (gradient ?? _defaultGradient) : null,
+        color: backGroundColor, // Apply color only if explicitly provided
         borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
       ),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent since it's handled by Container
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
@@ -56,11 +69,31 @@ class AppTextButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(
-          buttonText,
-          style: textStyle,
+        child: image != null
+            ? Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              image!,
+              width: 20.w,
+              height: 20.h,
+            ),
+            horizontalSpace(10.w),
+            Text(
+              buttonText,
+              style: textStyle ?? AppTextStyles.font16WhiteCairoMedium,
+            ),
+          ],
+        )
+            : Center(
+          child: Text(
+            buttonText,
+            style: textStyle ?? AppTextStyles.font16WhiteCairoMedium,
+          ),
         ),
       ),
     );
   }
 }
+
+

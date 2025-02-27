@@ -52,6 +52,13 @@ abstract class AppTextStyles {
   );
 
 
+  static TextStyle get font12GrayCairoRegular => GoogleFonts.cairo(
+    fontSize: 12.sp,
+    color: AppColors.gray,
+    fontWeight: AppFontWeights.regular,
+  );
+
+
 
 
 
@@ -75,7 +82,7 @@ abstract class AppTextStyles {
     fontWeight: AppFontWeights.regular,
   );
 
-  static TextStyle get font16BlackRegularCairo => GoogleFonts.cairo(
+  static TextStyle get font16BTextRegularCairo => GoogleFonts.cairo(
     color: AppColors.text,
     fontSize: 16.sp,
     fontWeight: AppFontWeights.regular,
@@ -87,17 +94,8 @@ abstract class AppTextStyles {
     fontWeight: AppFontWeights.regular,
   );
 
-  static TextStyle get font19WhiteRegularCairo => GoogleFonts.cairo(
-    fontSize: 19.sp,
-    color: Colors.white,
-    fontWeight: AppFontWeights.regular,
-  );
 
-  static TextStyle get font19BlackRegularCairo => GoogleFonts.cairo(
-    color: AppColors.text,
-    fontSize: 19.sp,
-    fontWeight: AppFontWeights.regular,
-  );
+
 
   static TextStyle get font20BlackRegularCairo => GoogleFonts.cairo(
     color: AppColors.text,
@@ -133,12 +131,6 @@ abstract class AppTextStyles {
     fontWeight: AppFontWeights.medium,
   );
 
-  static TextStyle get font16TextMediumCairo => GoogleFonts.cairo(
-    fontSize: 16.sp,
-    color: AppColors.text,
-    fontWeight: AppFontWeights.medium,
-  );
-
   static TextStyle get font12WhiteCairo => GoogleFonts.cairo(
     fontSize: 12.sp,
     color: AppColors.background,
@@ -167,17 +159,13 @@ abstract class AppTextStyles {
     color: AppColors.text,
     fontWeight: AppFontWeights.medium,
   );
-  static TextStyle get font16BlackCairoRegular => GoogleFonts.cairo(
-    fontSize: 16.sp,
-    color: AppColors.text,
-    fontWeight: AppFontWeights.regular,
-  );
 
-  static TextStyle get font16BlackMediumCairo => GoogleFonts.cairo(
+  static TextStyle get font16WhiteCairoMedium => GoogleFonts.cairo(
     fontSize: 16.sp,
-    color: AppColors.text,
+    color: Colors.white,
     fontWeight: AppFontWeights.medium,
   );
+
 
 
   static TextStyle get font16PrimaryColorMediumCairo => GoogleFonts.cairo(
@@ -191,25 +179,18 @@ abstract class AppTextStyles {
     fontSize: 18.sp,
     fontWeight: AppFontWeights.medium,
   );
-  static TextStyle get font18BlackCairoRegular => GoogleFonts.cairo(
-    fontSize: 18.sp,
-    color: AppColors.text,
-    fontWeight: AppFontWeights.medium,
-  );
-  static TextStyle get font18BlackCairoMedium => GoogleFonts.cairo(
-    fontSize: 18.sp,
-    color: AppColors.text,
-    fontWeight: AppFontWeights.medium,
-  );
+
+
   static TextStyle get font20BlackMediumCairo => GoogleFonts.cairo(
     fontSize: 20.sp,
     color: AppColors.text,
     fontWeight: AppFontWeights.medium,
   );
 
-  static TextStyle get font20BlackCairoMedium => GoogleFonts.cairo(
-    fontSize: 20.sp,
-    color: AppColors.text,
+
+  static TextStyle get font18WhiteCairoMedium => GoogleFonts.cairo(
+    fontSize: 18.sp,
+    color: Colors.white,
     fontWeight: AppFontWeights.medium,
   );
 
