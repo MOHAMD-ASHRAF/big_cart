@@ -36,7 +36,7 @@ class AppTextButton extends StatelessWidget {
   final String? image;
 
   /// Default gradient
-  Gradient get _defaultGradient => LinearGradient(
+  Gradient get _defaultGradient => const LinearGradient(
     colors: [AppColors.primary, AppColors.primaryDark], // Example gradient
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
