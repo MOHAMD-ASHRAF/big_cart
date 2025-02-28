@@ -9,11 +9,10 @@ import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_richText.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
-import '../widgets/remember_me_and_forget.dart';
-import '../widgets/shadow_appBar.dart';
+import '../../../login/ui/widgets/shadow_appBar.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,39 +44,42 @@ class LoginPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome back!',
+                      'Create account',
                       style: AppTextStyles.font24TextBoldCairo,
                     ),
                     Text(
-                      'Sign in to your account',
+                      'Quickly create account',
                       style: AppTextStyles.font12GrayCairoRegular,
                     ),
                     verticalSpace(28),
-                    CustomTextFormField(
+                    const CustomTextFormField(
                       hintText: 'Emil Address',
                       prefixIcon: Icons.email_outlined,
                     ),
                     verticalSpace(6),
-                    CustomTextFormField(
+                    const CustomTextFormField(
+                      hintText: 'Phone Number',
+                      prefixIcon: Icons.phone_outlined,
+                    ),
+                    verticalSpace(6),
+                    const CustomTextFormField(
                       hintText: 'Password',
                       prefixIcon: Icons.lock_outline,
                       isPassword: true,
                     ),
                     verticalSpace(16),
-                    RememberMeAndForgetWidget(),
-                    verticalSpace(16),
 
                     AppTextButton(
-                      buttonText: 'login',
+                      buttonText: 'Signup',
                       onPressed: () {},
                     ),
                     verticalSpace(28),
                     Center(
                       child: CustomRichText(
-                        title: 'Don’t have an account ?',
-                        value: 'Sign up',
+                        title: 'Already have an account ?',
+                        value: 'Login',
                         onTap: () {
-                          context.pushNamed(Routes.signupPage);
+                          context.pop();
                         },
                       ),
                     ),

@@ -1,4 +1,6 @@
+import 'package:big_cart/bigCart_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final String hintText;
@@ -27,6 +29,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         filled: true,
         fillColor: Colors.white,
         hintText: widget.hintText,
+        hintStyle: const TextStyle(color: Colors.grey),
         prefixIcon: Icon(widget.prefixIcon, color: Colors.grey),
         suffixIcon: widget.isPassword
             ? IconButton(
@@ -42,7 +45,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         )
             : null,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(8.r),
           borderSide: BorderSide.none,
         ),
       ),
