@@ -48,14 +48,14 @@ class AppTextButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: backGroundColor == null ? (gradient ?? _defaultGradient) : null,
         color: backGroundColor, // Apply color only if explicitly provided
-        borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
+        borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
       ),
       child: TextButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.transparent),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
+              borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
             ),
           ),
           padding: MaterialStateProperty.all<EdgeInsets>(

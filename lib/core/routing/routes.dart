@@ -3,5 +3,6 @@ class Routes{
   static const String homePage = '/homePage';
   static const String welcomePage = '/welcomePage';
   static const String loginPage = '/loginPage';
+  static const String signupPage = '/signupPage';
 
 }
