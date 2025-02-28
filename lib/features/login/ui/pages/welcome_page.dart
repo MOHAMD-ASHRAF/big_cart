@@ -3,12 +3,12 @@ import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
 import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/core/widgets/app_text_button.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/widgets/custom_richText.dart';
 import '../widgets/shadow_appBar.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -31,10 +31,15 @@ class WelcomePage extends StatelessWidget {
             ),
             const Spacer(),
             Container(
-                height: MediaQuery.of(context).size.height * 0.45,
-                color: AppColors.background,
                 width: double.infinity,
                 padding: EdgeInsets.all(16.w),
+                decoration: BoxDecoration(
+                  color: AppColors.background,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(16.r),
+                    topRight: Radius.circular(16.r),
+                  ),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,25 +68,15 @@ class WelcomePage extends StatelessWidget {
                     ),
                     verticalSpace(28),
                     Center(
-                      child: RichText(
-                        text: TextSpan(
-                          text: "Already have an account? ",
-                          style: AppTextStyles.font16GrayCairoMedium,
-                          // Regular style
-                          children: [
-                            TextSpan(
-                              text: "Login",
-                              style: AppTextStyles.font16BlackCairoMedium
-                                  .copyWith(fontWeight: FontWeight.bold),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  context.pushNamed(Routes.homePage);
-                                },
-                            ),
-                          ],
-                        ),
+                      child: CustomRichText(
+                        title: 'Already have an account ?',
+                        value: 'Login',
+                        onTap: () {
+                          context.pushNamed(Routes.homePage);
+                        },
                       ),
                     ),
+                    verticalSpace(12),
                   ],
                 ))
           ])
