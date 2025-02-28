@@ -6,17 +6,23 @@ import 'package:big_cart/features/onboarding/ui/pages/onboarding_page.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../features/login/ui/pages/login_page.dart';
+
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
-    final    arguments = settings.arguments;
+    final arguments = settings.arguments;
 
     switch (settings.name) {
       case Routes.onBoardingPage:
         return MaterialPageRoute(builder: (_) => const OnboardingPage());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
+
+      /// Auth routes
       case Routes.welcomePage:
         return MaterialPageRoute(builder: (_) => const WelcomePage());
+      case Routes.loginPage:
+        return MaterialPageRoute(builder: (_) => const LoginPage());
 
       default:
         return MaterialPageRoute(
