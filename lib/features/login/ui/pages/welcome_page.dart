@@ -22,6 +22,7 @@ class WelcomePage extends StatelessWidget {
           Image.asset(
             AppAssets.welcomeImage,
             width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.75,
             fit: BoxFit.cover,
           ),
           Column(children: [

@@ -9,7 +9,7 @@ abstract class AppAssets {
   static const String firstImage = 'assets/image/first_image.png';
   static const String secondImage = 'assets/image/second_image.png';
   static const String thirdImage = 'assets/image/thired_image.png';
-  static const String welcomeImage = 'assets/image/welcomePage.png';
+  static const String welcomeImage = 'assets/image/login.jpg';
 
   //****************************************************************************
 
