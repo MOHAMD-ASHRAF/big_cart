@@ -1,7 +1,6 @@
 import 'package:big_cart/core/constants/app_assets.dart';
 import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
-import 'package:big_cart/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
