@@ -2,17 +2,18 @@ import 'package:big_cart/core/constants/app_assets.dart';
 import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
 import 'package:big_cart/core/routing/routes.dart';
-import 'package:big_cart/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/custom_richText.dart';
+import '../../../../core/widgets/custom_text_form_field.dart';
+import '../widgets/remember_me_and_forget.dart';
 import '../widgets/shadow_appBar.dart';
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,35 +45,39 @@ class WelcomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome To Big Cart',
+                      'Welcome back!',
                       style: AppTextStyles.font24TextBoldCairo,
                     ),
                     Text(
-                      'Buy Quality Dairy Products Buy Quality Dairy Products Buy Quality Dairy Products ',
+                      'Sign in to your account',
                       style: AppTextStyles.font12GrayCairoRegular,
                     ),
                     verticalSpace(28),
-                    AppTextButton(
-                      buttonText: 'Continue with google',
-                      textStyle: AppTextStyles.font16BlackCairoMedium,
-                      onPressed: () {},
-                      image: AppAssets.google,
-                      backGroundColor: Colors.white,
+                    CustomTextFormField(
+                      hintText: 'Emil Address',
+                      prefixIcon: Icons.email_outlined,
+                    ),
+                    verticalSpace(6),
+                    CustomTextFormField(
+                      hintText: 'Password',
+                      prefixIcon: Icons.lock_outline,
+                      isPassword: true,
                     ),
                     verticalSpace(16),
+                    RememberMeAndForgetWidget(),
+                    verticalSpace(16),
+
                     AppTextButton(
-                      buttonText: 'Create an account',
-                      textStyle: AppTextStyles.font16BlackCairoMedium,
+                      buttonText: 'login',
                       onPressed: () {},
-                      image: AppAssets.person,
                     ),
                     verticalSpace(28),
                     Center(
                       child: CustomRichText(
-                        title: 'Already have an account ?',
-                        value: 'Login',
+                        title: 'Don’t have an account ?',
+                        value: 'Sign up',
                         onTap: () {
-                          context.pushNamed(Routes.loginPage);
+                          context.pushNamed(Routes.homePage);
                         },
                       ),
                     ),
@@ -85,3 +90,4 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
+
