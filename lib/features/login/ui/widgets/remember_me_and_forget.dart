@@ -24,10 +24,10 @@ class RememberMeAndForgetWidget extends StatelessWidget {
           'Welcome back!',
           style: AppTextStyles.font16GrayCairoMedium,
         ),
-        Spacer(),
+        const Spacer(),
         GestureDetector(
           onTap: (){
-            print('goo');
+
           },
           child: Text(
             'Forget Password',

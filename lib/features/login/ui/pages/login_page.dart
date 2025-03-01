@@ -53,18 +53,18 @@ class LoginPage extends StatelessWidget {
                       style: AppTextStyles.font12GrayCairoRegular,
                     ),
                     verticalSpace(28),
-                    CustomTextFormField(
+                    const CustomTextFormField(
                       hintText: 'Emil Address',
                       prefixIcon: Icons.email_outlined,
                     ),
                     verticalSpace(6),
-                    CustomTextFormField(
+                    const CustomTextFormField(
                       hintText: 'Password',
                       prefixIcon: Icons.lock_outline,
                       isPassword: true,
                     ),
                     verticalSpace(16),
-                    RememberMeAndForgetWidget(),
+                    const RememberMeAndForgetWidget(),
                     verticalSpace(16),
 
                     AppTextButton(
