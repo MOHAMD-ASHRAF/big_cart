@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theming/app_colors.dart';
 import '../theming/app_text_styles.dart';
 
-class AppTextFormFeild extends StatelessWidget {
-  const AppTextFormFeild(
+class AppTextFormField extends StatelessWidget {
+  const AppTextFormField(
       {super.key,
       this.contentPadding,
       this.focusedBorder,

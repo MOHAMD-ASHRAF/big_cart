@@ -69,7 +69,9 @@ class LoginPage extends StatelessWidget {
 
                     AppTextButton(
                       buttonText: 'login',
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routes.homePage);
+                      },
                     ),
                     verticalSpace(28),
                     Center(
