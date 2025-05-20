@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                 const CustomTextFormField(
                   hintText: 'Search keywords..',
                   prefixIcon: Icons.search,
-                  fillColor: AppColors.moreLightGray,
+                  fillColor: Colors.white,
                   suffixIcon: Icons.sort,
                 ),
                 SizedBox(height: 16.h),

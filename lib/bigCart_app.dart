@@ -21,7 +21,7 @@ class BigCartApp extends StatelessWidget {
         title: 'Big Cart',
         theme: ThemeData(
           primaryColor: AppColors.primary,
-          scaffoldBackgroundColor: Colors.white
+          scaffoldBackgroundColor: AppColors.background
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onBoardingPage,

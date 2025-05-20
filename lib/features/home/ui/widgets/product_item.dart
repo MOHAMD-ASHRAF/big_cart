@@ -16,7 +16,7 @@ class ProductItem extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.r),
-        color: AppColors.moreLightGray2,
+        color: Colors.white
       ),
       child: Column(
         children: [
