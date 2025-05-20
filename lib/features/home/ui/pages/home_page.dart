@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/enums/categories.dart';
-import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/categories_text_widget.dart';
