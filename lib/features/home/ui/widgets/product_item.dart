@@ -14,10 +14,9 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.r),
-        color: AppColors.moreLightGray,
+        color: AppColors.moreLightGray2,
       ),
       child: Column(
         children: [
@@ -38,7 +37,7 @@ class ProductItem extends StatelessWidget {
                 padding: EdgeInsets.only(right: 8.w, top: 4.h),
                 child: Icon(
                   Icons.favorite,
-                  color: Colors.yellow,
+                  color: Colors.red,
                   size: 24.sp,
                 ),
               ),
@@ -72,13 +71,16 @@ class ProductItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(AppAssets.cart, height: 16.h),
-              SizedBox(width: 4.w),
+              SizedBox(width: 6.w),
               Text(
                 'Add to cart',
                 style: AppTextStyles.font14BlackSemiBoldCairo,
               )
             ],
-          )
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
         ],
       ),
     );

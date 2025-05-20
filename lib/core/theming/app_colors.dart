@@ -12,6 +12,7 @@ class AppColors {
   static const Color gray = Color(0xff868889);
   static const Color lightGray = Color(0xffDCDCDC);
   static const Color moreLightGray = Color(0xffF4F5F9);
+  static const Color moreLightGray2 = Color(0xfff7f9f9);
 
   /// categories
   static const Color vegetables = Color(0xffE6F2EA);
