@@ -34,7 +34,7 @@ class CategoriesItem extends StatelessWidget {
         SizedBox(height: 8.h),
         Text(
           title,
-          style: AppTextStyles.font16GrayCairoMedium,
+          style: AppTextStyles.font14GrayCairoMedium,
         )
       ],
     );
