@@ -18,10 +18,10 @@ class BigCartApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         onGenerateRoute: appRouter.generateRoute,
-        title: 'Doc App',
+        title: 'Big Cart',
         theme: ThemeData(
           primaryColor: AppColors.primary,
-          scaffoldBackgroundColor: Colors.white
+          scaffoldBackgroundColor: AppColors.background
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onBoardingPage,

@@ -22,6 +22,7 @@ abstract class AppAssets {
   static const String edibleOil = 'assets/vectors/edibleOil.svg';
   static const String household = 'assets/vectors/Household.svg';
   static const String babyCare = 'assets/vectors/Babycare.svg';
+  static const String cart = 'assets/vectors/cart.svg';
 
 
 

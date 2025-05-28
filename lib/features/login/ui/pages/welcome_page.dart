@@ -66,7 +66,9 @@ class WelcomePage extends StatelessWidget {
                     AppTextButton(
                       buttonText: 'Create an account',
                       textStyle: AppTextStyles.font16BlackCairoMedium,
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routes.signupPage);
+                      },
                       image: AppAssets.person,
                     ),
                     verticalSpace(28),
