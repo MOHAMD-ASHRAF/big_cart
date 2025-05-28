@@ -112,7 +112,7 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                     SizedBox(height: 16.h),
                     Text(
-                      'Organic Mountain works as a seller for many organic growers of organic lemons. Organic lemons are easy to spot in your produce aisle. They are just like regular lemons, but they will usually have a few more scars on the outside of the lemon skin. Organic lemons are considered to be the world',
+                      'Organic Mountain works as a seller for many organic growers of organic lemons. Organic lemons Organic Mountain works as a seller for many organic growers of organic lemons. Organic lemonsOrganic Mountain works as a seller for many organic growers of organic lemons. Organic lemons are easy to spot in your produce aisle. They are just like regular lemons, but they will usually have a few more scars on the outside of the lemon skin. Organic lemons are considered to be the world',
                       style: AppTextStyles.font12GrayCairoRegular,
                     ),
                     SizedBox(height: 16.h),
