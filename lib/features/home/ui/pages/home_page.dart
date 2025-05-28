@@ -1,7 +1,9 @@
+import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/enums/categories.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/categories_text_widget.dart';
@@ -69,7 +71,10 @@ class HomePage extends StatelessWidget {
                   mainAxisSpacing: 16.h,
                   crossAxisSpacing: 16.w,
                   children: List.generate(11, (index) {
-                    return const ProductItem();
+                    return GestureDetector(
+                        onTap: () {
+                          context.pushNamed(Routes.productDetailsPage);
+                        }, child: const ProductItem());
                   }),
                 ),
               ],

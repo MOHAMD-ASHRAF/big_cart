@@ -5,4 +5,7 @@ class Routes{
   static const String loginPage = '/loginPage';
   static const String signupPage = '/signupPage';
 
+  ///----------- home routes --------------///
+  static const String productDetailsPage = '/home/productDetailsPage';
+
 }

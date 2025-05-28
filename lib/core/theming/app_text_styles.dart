@@ -259,6 +259,11 @@ abstract class AppTextStyles {
     color: AppColors.text,
     fontWeight: AppFontWeights.semiBold,
   );
+  static TextStyle get font18PrimaryDarkSemiBoldCairo => GoogleFonts.cairo(
+    fontSize: 18.sp,
+    color: AppColors.primaryDark,
+    fontWeight: AppFontWeights.semiBold,
+  );
 
   static TextStyle get font20BlackSemiBoldCairo => GoogleFonts.cairo(
     fontSize: 20.sp,

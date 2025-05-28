@@ -1,12 +1,12 @@
 import 'package:big_cart/core/routing/routes.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
-import 'package:big_cart/features/home/ui/pages/second_page.dart';
 import 'package:big_cart/features/login/ui/pages/welcome_page.dart';
 import 'package:big_cart/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:big_cart/features/sign_up/ui/pages/signup_page.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../features/home/ui/pages/product_details.dart';
 import '../../features/login/ui/pages/login_page.dart';
 
 class AppRouter {
@@ -26,6 +26,11 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginPage());
       case Routes.signupPage:
         return MaterialPageRoute(builder: (_) => const SignupPage());
+
+        /// home routes
+    case Routes.productDetailsPage:
+      return MaterialPageRoute(builder: (_) => const ProductDetailsPage());
+
 
       default:
         return MaterialPageRoute(
