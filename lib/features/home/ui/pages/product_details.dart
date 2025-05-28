@@ -118,7 +118,7 @@ class ProductDetailsPage extends StatelessWidget {
                     SizedBox(height: 16.h),
 
                     // Quantity Selector
-                    QuantityProductWidget(),
+                    const QuantityProductWidget(),
 
                     SizedBox(height: 16.h),
                   ],
