@@ -61,6 +61,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16.h),
+
                 const CategoriesTextWidget(
                   title: 'Featured products',
                   //onTap: () => Navigator.pushNamed(context, Routes.categories),
