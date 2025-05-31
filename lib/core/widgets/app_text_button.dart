@@ -1,4 +1,3 @@
-import 'package:big_cart/core/constants/app_assets.dart';
 import 'package:big_cart/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,19 +51,19 @@ class AppTextButton extends StatelessWidget {
       ),
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.transparent),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          backgroundColor: WidgetStateProperty.all(Colors.transparent),
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
             ),
           ),
-          padding: MaterialStateProperty.all<EdgeInsets>(
+          padding: WidgetStateProperty.all<EdgeInsets>(
             EdgeInsets.symmetric(
               horizontal: horizontalPadding?.w ?? 12.w,
               vertical: verticalPadding?.h ?? 14.h,
             ),
           ),
-          fixedSize: MaterialStateProperty.all(
+          fixedSize: WidgetStateProperty.all(
             Size(buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 50.h),
           ),
         ),

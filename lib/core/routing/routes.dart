@@ -5,4 +5,12 @@ class Routes{
   static const String loginPage = '/loginPage';
   static const String signupPage = '/signupPage';
 
+  ///----------- navigation --------------///
+  static const String navigationPage = '/navigationPage';
+
+  ///----------- home routes --------------///
+  static const String productDetailsPage = '/home/productDetailsPage';
+  static const String categoryPage = '/home/categoryPage';
+  static const String productPage  = '/home/productPage';
+
 }

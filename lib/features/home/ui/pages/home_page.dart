@@ -1,7 +1,9 @@
+import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/enums/categories.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/categories_text_widget.dart';
@@ -41,9 +43,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                const CategoriesTextWidget(
+                 CategoriesTextWidget(
                   title: 'Categories',
-                  //onTap: () => Navigator.pushNamed(context, Routes.categories),
+                  onTap: () => Navigator.pushNamed(context, Routes.categoryPage),
                 ),
                 SizedBox(height: 16.h),
                 SizedBox(
@@ -59,9 +61,10 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                const CategoriesTextWidget(
+
+                 CategoriesTextWidget(
                   title: 'Featured products',
-                  //onTap: () => Navigator.pushNamed(context, Routes.categories),
+                  onTap: () => Navigator.pushNamed(context, Routes.productPage),
                 ),
                 SizedBox(height: 16.h),
                 StaggeredGrid.count(
@@ -69,7 +72,10 @@ class HomePage extends StatelessWidget {
                   mainAxisSpacing: 16.h,
                   crossAxisSpacing: 16.w,
                   children: List.generate(11, (index) {
-                    return const ProductItem();
+                    return GestureDetector(
+                        onTap: () {
+                          context.pushNamed(Routes.productDetailsPage);
+                        }, child: const ProductItem());
                   }),
                 ),
               ],
@@ -80,3 +86,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
