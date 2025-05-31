@@ -6,6 +6,7 @@ import 'package:big_cart/features/sign_up/ui/pages/signup_page.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../features/home/ui/home_navigation_bar.dart' show HomeNavigationBar;
 import '../../features/home/ui/pages/product_details.dart';
 import '../../features/login/ui/pages/login_page.dart';
 
@@ -16,6 +17,10 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingPage:
         return MaterialPageRoute(builder: (_) => const OnboardingPage());
+        
+        case Routes.navigationPage:
+        return MaterialPageRoute(builder: (_) => const HomeNavigationBar());
+        
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
 
