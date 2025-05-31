@@ -39,8 +39,8 @@ class _QuantityProductWidgetState extends State<QuantityProductWidget> {
                 });
               }
             },
-            icon: Icon(Icons.remove, color: Colors.green),
-            constraints: BoxConstraints(),
+            icon: const Icon(Icons.remove, color: Colors.green),
+            constraints: const BoxConstraints(),
             padding: EdgeInsets.all(8.w),
           ),
           Container(
@@ -65,8 +65,8 @@ class _QuantityProductWidgetState extends State<QuantityProductWidget> {
                 quantity++;
               });
             },
-            icon: Icon(Icons.add, color: Colors.green),
-            constraints: BoxConstraints(),
+            icon: const Icon(Icons.add, color: Colors.green),
+            constraints: const BoxConstraints(),
             padding: EdgeInsets.all(8.w),
           ),
         ],

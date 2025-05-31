@@ -12,7 +12,6 @@ import 'app_font_weights.dart';
 
 
 abstract class AppTextStyles {
-  static var font14SecondaryBlackCairo;
 
   // --------------------- REGULAR Text Styles - w400 ---------------------
   static TextStyle get font10RegularMonserrat => GoogleFonts.montserrat(

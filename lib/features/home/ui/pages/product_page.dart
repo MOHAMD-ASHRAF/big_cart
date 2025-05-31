@@ -2,10 +2,7 @@ import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-
-import '../../../../core/enums/categories.dart';
 import '../../../../core/routing/routes.dart';
-import '../widgets/categories_item.dart';
 import '../widgets/product_item.dart';
 
 class ProductPage extends StatelessWidget {
