@@ -1,4 +1,5 @@
 import 'package:big_cart/core/routing/routes.dart';
+import 'package:big_cart/features/home/ui/pages/categories_page.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:big_cart/features/login/ui/pages/welcome_page.dart';
 import 'package:big_cart/features/onboarding/ui/pages/onboarding_page.dart';
@@ -35,6 +36,8 @@ class AppRouter {
         /// home routes
     case Routes.productDetailsPage:
       return MaterialPageRoute(builder: (_) => const ProductDetailsPage());
+      case Routes.categoryPage:
+        return MaterialPageRoute(builder: (_) => const CategoriesPage());
 
 
       default:

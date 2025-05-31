@@ -16,19 +16,19 @@ class CategoriesTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      Text(
-        title,
-        style: AppTextStyles.font18BlackSemiBoldCairo,
-      ),
-      GestureDetector(
-        onTap: onTap,
-        child: Icon(
+    return GestureDetector(
+      onTap: onTap,
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Text(
+          title,
+          style: AppTextStyles.font18BlackSemiBoldCairo,
+        ),
+        Icon(
           Icons.arrow_forward_ios,
           color: AppColors.gray,
           size: 16.sp,
-        ),
-      )
-    ]);
+        )
+      ]),
+    );
   }
 }
