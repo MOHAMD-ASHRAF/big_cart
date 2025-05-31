@@ -12,8 +12,9 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
    int _currentIndex = 0;
    List<Widget> screens = [
      const HomePage(),
-     const Center(child: Text('Search'),),
-     const Center(child: Text('Profile'),),
+     const Center(child: Text('profile'),),
+     const Center(child: Text('favorite'),),
+     const Center(child: Text('cart'),),
    ];
   @override
   Widget build(BuildContext context) {
@@ -31,24 +32,29 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.home_outlined,
             ),
             label: 'Home',
 
-
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.search,
+              Icons.perm_identity_sharp,
             ),
-            label: 'Search',
+            label: 'profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
+              Icons.favorite_border,
             ),
-            label: 'Profile',
-    ),
+            label: 'Favorite',
+       ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_bag_outlined,
+            ),
+            label: 'Cart',
+          ),
         ],
       ),
     );

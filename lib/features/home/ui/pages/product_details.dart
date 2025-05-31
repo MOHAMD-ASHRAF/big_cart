@@ -30,18 +30,20 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 36.h, horizontal: 16.w),
-                  child: Icon(
-                    size: 30.sp,
-                    Icons.arrow_back,
-                    color: Colors.black87,
+                GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 36.h, horizontal: 16.w),
+                    child: Icon(
+                      size: 30.sp,
+                      Icons.arrow_back,
+                      color: Colors.black87,
+                    ),
                   ),
                 )
               ],
             ),
-
             // Product Details Section
             Container(
               width: double.infinity,
