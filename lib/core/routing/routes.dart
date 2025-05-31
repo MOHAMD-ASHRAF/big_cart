@@ -11,5 +11,6 @@ class Routes{
   ///----------- home routes --------------///
   static const String productDetailsPage = '/home/productDetailsPage';
   static const String categoryPage = '/home/categoryPage';
+  static const String productPage  = '/home/productPage';
 
 }
