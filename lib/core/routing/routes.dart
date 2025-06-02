@@ -13,4 +13,8 @@ class Routes{
   static const String categoryPage = '/home/categoryPage';
   static const String productPage  = '/home/productPage';
 
+///----------- favorite --------------///
+ static const String favoritePage = '/favoritePage';
+
+
 }
