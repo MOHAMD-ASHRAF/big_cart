@@ -1,7 +1,7 @@
 #  photo from project
 
 ## 🎿 :lets statr
-### About skid
+### About app
 Built a mobile app for easy online supermarket shopping. Users can browse products by category like Vegetables Fruits,
  Beverages, Grocery, Baby care, and Household items. The app allows for adding items to a cart, paying online, and tracking
  orders from purchase to delivery. Focused on a smooth and easy user experience.
