@@ -109,6 +109,7 @@ class _FavoritesPageState extends State<FavoritesPage>
               )
             ),
           ),
+
         ],
       ),
     );
