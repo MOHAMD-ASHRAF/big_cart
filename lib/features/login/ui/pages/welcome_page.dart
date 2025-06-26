@@ -56,7 +56,7 @@ class WelcomePage extends StatelessWidget {
                       buttonText: 'Continue with google',
                       textStyle: AppTextStyles.font16BlackCairoMedium,
                       onPressed: () {
-                        context.pushNamed(Routes.homePage);
+                        context.pushNamed(Routes.navigationPage);
 
                       },
                       image: AppAssets.google,

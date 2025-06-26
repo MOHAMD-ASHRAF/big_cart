@@ -1,3 +1,5 @@
+import 'package:big_cart/features/cart/ui/pages/cart_page.dart';
+import 'package:big_cart/features/favorits/ui/pages/favorites_page.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,13 +11,16 @@ class HomeNavigationBar extends StatefulWidget {
 }
 
 class _HomeNavigationBarState extends State<HomeNavigationBar> {
-   int _currentIndex = 0;
-   List<Widget> screens = [
-     const HomePage(),
-     const Center(child: Text('profile'),),
-     const Center(child: Text('favorite'),),
-     const Center(child: Text('cart'),),
-   ];
+  int _currentIndex = 0;
+  List<Widget> screens = [
+    const HomePage(),
+    const FavoritesPage(),
+    const Center(
+      child: Text('profile'),
+    ),
+    const CartPage()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +40,12 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
               Icons.home_outlined,
             ),
             label: 'Home',
-
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite_border,
+            ),
+            label: 'Favorite',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -45,15 +55,10 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.favorite_border,
-            ),
-            label: 'Favorite',
-       ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.shopping_bag_outlined,
             ),
             label: 'Cart',
+
           ),
         ],
       ),
