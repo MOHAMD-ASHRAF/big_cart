@@ -3,6 +3,7 @@ import 'package:big_cart/core/helpers/extesions.dart';
 import 'package:big_cart/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
@@ -71,7 +72,9 @@ class SignupPage extends StatelessWidget {
 
                     AppTextButton(
                       buttonText: 'Signup',
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routes.navigationPage);
+                      },
                     ),
                     verticalSpace(28),
                     Center(
