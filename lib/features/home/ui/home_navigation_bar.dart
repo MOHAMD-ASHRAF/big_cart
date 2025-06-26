@@ -1,3 +1,4 @@
+import 'package:big_cart/features/cart/ui/pages/cart_page.dart';
 import 'package:big_cart/features/favorits/ui/pages/favorites_page.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
     const Center(
       child: Text('profile'),
     ),
-    const Center(
-      child: Text('cart'),
-    ),
+    const CartPage()
   ];
 
   @override
@@ -59,6 +58,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
               Icons.shopping_bag_outlined,
             ),
             label: 'Cart',
+
           ),
         ],
       ),
