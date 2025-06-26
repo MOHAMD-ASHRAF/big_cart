@@ -3,6 +3,8 @@ import 'package:big_cart/features/favorits/ui/pages/favorites_page.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../profile/ui/pages/profile_page.dart';
+
 class HomeNavigationBar extends StatefulWidget {
   const HomeNavigationBar({super.key});
 
@@ -15,9 +17,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
   List<Widget> screens = [
     const HomePage(),
     const FavoritesPage(),
-    const Center(
-      child: Text('profile'),
-    ),
+    const ProfilePage(),
     const CartPage()
   ];
 
