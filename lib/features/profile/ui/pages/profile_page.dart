@@ -1,4 +1,5 @@
 import 'package:big_cart/core/theming/app_colors.dart';
+import 'package:big_cart/features/profile/ui/widget/build_menu_item_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,12 +9,11 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: Column(
           children: [
             Stack(
-                        alignment: Alignment.center,
+              alignment: Alignment.center,
               children: [
                 Column(
                   children: [
@@ -27,7 +27,6 @@ class ProfilePage extends StatelessWidget {
                       color: AppColors.background,
                       width: double.infinity,
                     ),
-        
                   ],
                 ),
                 Column(
@@ -37,7 +36,8 @@ class ProfilePage extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 50,
-                          backgroundImage: AssetImage('assets/images/profile.jpg'),
+                          backgroundImage:
+                              AssetImage('assets/image/person.png'),
                         ),
                         Positioned(
                           bottom: 4,
@@ -45,7 +45,8 @@ class ProfilePage extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 15,
                             backgroundColor: Colors.green,
-                            child: Icon(Icons.camera_alt, size: 15, color: Colors.white),
+                            child: Icon(Icons.camera_alt,
+                                size: 15, color: Colors.white),
                           ),
                         )
                       ],
@@ -62,43 +63,36 @@ class ProfilePage extends StatelessWidget {
                       "oliviaaustin@gmail.com",
                       style: TextStyle(color: Colors.grey[600]),
                     ),
-
                   ],
                 ),
-        
               ],
             ),
             Expanded(
               child: ListView(
-               // padding: const EdgeInsets.all(16),
-                children: [
-                  buildMenuItem(Icons.person_outline, 'About me'),
-                  buildMenuItem(Icons.inventory_2_outlined, 'My Orders'),
-                  buildMenuItem(Icons.favorite_border, 'My Favorites'),
-                  buildMenuItem(Icons.location_on_outlined, 'My Address'),
+                // padding: const EdgeInsets.all(16),
+                children: const [
+                  BuildMenuItemProfile(
+                      icon: Icons.person_outline, title: 'About me'),
+                  BuildMenuItemProfile(
+                      icon: Icons.inventory_2_outlined, title: 'My Orders'),
+                  BuildMenuItemProfile(
+                      icon: Icons.favorite_border, title: 'My Favorites'),
+                  BuildMenuItemProfile(
+                      icon: Icons.location_on_outlined, title: 'My Address'),
+                  BuildMenuItemProfile(
+                      icon: Icons.credit_card, title: 'Credit Card'),
+                  BuildMenuItemProfile(
+                      icon: Icons.attractions_outlined, title: 'Transactions'),
+                  BuildMenuItemProfile(
+                      icon: Icons.notifications_outlined, title: 'Notifications'),
+                  BuildMenuItemProfile(
+                      icon: Icons.arrow_back, title: 'Sign out'),
                 ],
               ),
             ),
           ],
         ),
       ),
-    );
-  }
-
-  Widget buildMenuItem(IconData icon, String title) {
-    return Column(
-      children: [
-        ListTile(
-          leading: Icon(icon, color: Colors.green),
-          title: Text(
-            title,
-            style: const TextStyle(fontWeight: FontWeight.w600),
-          ),
-          trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
-          onTap: () {},
-        ),
-
-      ],
     );
   }
 }
