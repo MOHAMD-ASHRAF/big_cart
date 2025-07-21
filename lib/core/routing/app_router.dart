@@ -1,4 +1,5 @@
 import 'package:big_cart/core/routing/routes.dart';
+import 'package:big_cart/features/address/ui/pages/address_page.dart';
 import 'package:big_cart/features/home/ui/pages/categories_page.dart';
 import 'package:big_cart/features/home/ui/pages/home_page.dart';
 import 'package:big_cart/features/home/ui/pages/product_page.dart';
@@ -47,6 +48,10 @@ class AppRouter {
         ///favorites
       case Routes.favoritePage:
         return MaterialPageRoute(builder: (_) => const FavoritesPage());
+
+    ///address
+      case Routes.addressPage:
+        return MaterialPageRoute(builder: (_) => const AddressPage());
 
 
       default:

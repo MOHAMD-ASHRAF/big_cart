@@ -3,6 +3,8 @@ import 'package:big_cart/features/profile/ui/widget/build_menu_item_profile.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/routing/routes.dart';
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -70,22 +72,27 @@ class ProfilePage extends StatelessWidget {
             Expanded(
               child: ListView(
                 // padding: const EdgeInsets.all(16),
-                children: const [
-                  BuildMenuItemProfile(
+                children: [
+                  const BuildMenuItemProfile(
                       icon: Icons.person_outline, title: 'About me'),
-                  BuildMenuItemProfile(
+                  const BuildMenuItemProfile(
                       icon: Icons.inventory_2_outlined, title: 'My Orders'),
-                  BuildMenuItemProfile(
+                  const BuildMenuItemProfile(
                       icon: Icons.favorite_border, title: 'My Favorites'),
                   BuildMenuItemProfile(
-                      icon: Icons.location_on_outlined, title: 'My Address'),
-                  BuildMenuItemProfile(
+                    icon: Icons.location_on_outlined,
+                    title: 'My Address',
+                    onTap: () =>
+                        Navigator.pushNamed(context, Routes.addressPage),
+                  ),
+                  const BuildMenuItemProfile(
                       icon: Icons.credit_card, title: 'Credit Card'),
-                  BuildMenuItemProfile(
+                  const BuildMenuItemProfile(
                       icon: Icons.attractions_outlined, title: 'Transactions'),
-                  BuildMenuItemProfile(
-                      icon: Icons.notifications_outlined, title: 'Notifications'),
-                  BuildMenuItemProfile(
+                  const BuildMenuItemProfile(
+                      icon: Icons.notifications_outlined,
+                      title: 'Notifications'),
+                  const BuildMenuItemProfile(
                       icon: Icons.arrow_back, title: 'Sign out'),
                 ],
               ),

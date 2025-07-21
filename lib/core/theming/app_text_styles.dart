@@ -30,6 +30,13 @@ abstract class AppTextStyles {
   );
 
 
+  static TextStyle get font10GrayCairoRegular => GoogleFonts.cairo(
+    fontSize: 10.sp,
+    color: AppColors.gray,
+    fontWeight: AppFontWeights.regular,
+  );
+
+
 
 
   /// --------------------- MEDIUM Text Styles - w500 ---------------------
@@ -62,6 +69,12 @@ abstract class AppTextStyles {
   static TextStyle get font14WhiteCairoMedium => GoogleFonts.cairo(
     fontSize: 14.sp,
     color: Colors.white,
+    fontWeight: AppFontWeights.medium,
+  );
+
+  static TextStyle get font15WhiteCairoMedium => GoogleFonts.cairo(
+    fontSize: 15.sp,
+    color: Colors.grey,
     fontWeight: AppFontWeights.medium,
   );
 

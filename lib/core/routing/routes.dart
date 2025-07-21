@@ -16,5 +16,8 @@ class Routes{
 ///----------- favorite --------------///
  static const String favoritePage = '/favoritePage';
 
+  ///----------- address --------------///
+  static const String addressPage = '/addressPage';
+
 
 }
